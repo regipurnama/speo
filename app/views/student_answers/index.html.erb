@@ -1,0 +1,42 @@
+	<h2>STUDENT ANSWERS</h2>
+	<%= link_to 'New Student Answer', new_student_answer_path %>
+	<table border="1">
+	<tr>
+		<td><strong>No</strong></td>
+		<td><strong>Name Student</strong></td>
+		<td><strong>Question Number</strong></td>
+		<td><strong>Response</strong></td>
+		<td><strong>Teacher Scoring</strong></td>
+		<td colspan="3"><strong>Actions</strong></td>
+	</tr>
+<% @student_answers.each.with_index do |student_answer,index| %>
+
+<p>
+	<tr>
+		<td><%= "#{index + 1}" %></td>
+		<td>
+		<%= #student.grade.try(:name) 
+				if student_answer.student_id.present?
+					student_answer.student.name
+				end
+		%>
+		<td>
+		<%= #student.grade.try(:name) 
+				if student_answer.question_id.present?
+					student_answer.question_id
+				end
+		%>
+		<td><%= student_answer.response %></td>
+		<td><%= student_answer.teacher_score %></td>
+
+	<td colspan="3">
+	<%= link_to 'Show', student_answer_path(student_answer.id) %>
+	<%= link_to 'Edit', edit_student_answer_path(student_answer.id) %>
+  <%= link_to 'Destroy', student_answer_path(student_answer.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</p>
+
+<% end %>
+</table>
+<%= paginate @student_answers %>
+
+

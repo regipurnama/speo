@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPEO</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+		<%= link_to 'High Scores', high_scores_path %> |
+		<%= link_to 'Students', students_path %> |
+		<%= link_to 'Grades', grades_path %> |
+		<%= link_to 'Subjects', subjects_path %> |
+		<%= link_to 'Questions', questions_path %> |
+		<%= link_to 'Teachers', teachers_path %> |
+		<%= link_to 'Student Answers', student_answers_path %> |
+		<hr />
+    <%= yield %>
+  </body>
+</html>

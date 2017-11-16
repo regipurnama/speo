@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  host: localhost
+  username: root
+  password: password
+
+development:
+  <<: *default
+  database: speo_development
+
+production:
+  <<: *default
+  database: speo_production
+
+test:
+  <<: *default
+  database: speo_test

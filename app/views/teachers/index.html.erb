@@ -1,0 +1,23 @@
+<hr />
+	<h2>TEACHERS</h2>
+<%= link_to 'New teacher', new_teacher_path %></td>
+
+	<strong>No |</strong>
+	<strong>Name |</strong>
+	<strong>Gender |</strong>
+	<strong>Email |</strong>
+	<strong>Contact |</strong>
+	<strong>Action |</strong>
+<% @teacher.each.with_index do |teacher,index| %>
+<p>
+	<%= "#{index + 1}" %>
+	<%= teacher.name %>
+	<%= teacher.gender %>
+	<%= teacher.email %>
+	<%= teacher.contact %>
+	<%= link_to 'Show', teacher_path(teacher.id) %></td>
+	<%= link_to 'Edit', edit_teacher_path(teacher.id) %></td>
+  <%= link_to 'Destroy', teacher_path(teacher.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</p>
+ <% end %>
+	

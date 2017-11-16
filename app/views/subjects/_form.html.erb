@@ -1,0 +1,17 @@
+<%= form_for subject do |f| %>
+  <% if subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+      <ul>
+      <% subject.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+  <%= f.label :name, 'Name : ' %>
+  <%= f.text_field :name %><br />
+  <%= f.label :teacher_id, 'Grade' %>
+  <%= f.select :teacher_id, @teacher_options, include_blank: false %><br />
+  <%= f.submit %>
+<% end %>

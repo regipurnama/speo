@@ -1,0 +1,19 @@
+<%= form_for student do |f| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+  <%= f.label :name, 'Full Name : ' %>
+  <%= f.text_field :name %><br />
+  <%= f.label :gender %>
+  <%= f.select :gender, GENDER_OPTIONS, include_blank: false %><br />
+  <%= f.label :grade_id, 'Grade' %>
+  <%= f.select :grade_id, @grade_options, include_blank: false %><br />
+  <%= f.submit %>
+<% end %>

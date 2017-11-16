@@ -1,0 +1,23 @@
+<%= form_for student_answer do |f| %>
+  <% if student_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student_answer.errors.count, "error") %> prohibited this student_answer from being saved:</h2>
+      <ul>
+      <% student_answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+  <%= f.label :student_id, 'student' %>
+  <%= f.select :student_id, @student_options, include_blank: false %><br />
+  <%= f.label :question_id, 'Question' %>
+  <%= f.select :question_id, @question_options, include_blank: false %><br />
+  <%= f.label :response %>
+  <%= f.text_area :response, rows: 5, cols: 50 %><br />
+  <%= f.label :teacher_score %>
+  <%= f.text_field :teacher_score %><br />
+	<%= f.label :system_score %>   
+	<%= f.text_field :system_score, readonly: action_name.eql?('new') %><br />
+  <%= f.submit %>
+<% end %>

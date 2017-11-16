@@ -1,0 +1,62 @@
+<% total_answer = student_answers.count %>
+<table border='1'>
+<thead>
+	<tr>
+		<td rowspan="2">Term</td>
+		<td colspan="<%= total_answer %>">Term Frequency</td>
+		<td rowspan="2">Document Frequency</td>
+		<td>Inverse Document Frequency</td>
+		<td colspan="<%= total_answer %>">Weight Document Term</td>
+	</tr>
+	<tr>
+		<% student_answers.each.with_index do |student_answer, index| %>
+			<td><%= "D#{index + 1}" %></td>
+		<% end %>
+		<td>log(n/df)</td>
+		<% student_answers.each.with_index do |student_answer, index| %>
+			<td><%= "D#{index + 1}" %></td>
+		<% end %>
+	</tr>
+</thead>
+<tbody>
+	<% document_weights = [] %>
+	<% text_collection.each do |key_word| %>
+		<% document_frequency = 0 %>
+		<tr>
+			<td><%= key_word.titleize %></td>
+			<% student_answers.each do |student_answer| %>
+				<% answer_term_frequency = student_answer.answer_term_frequency[answer_term_frequency_key][key_word] %>
+				<% document_frequency += 1 if !answer_term_frequency.zero?  %>
+				<td><%= answer_term_frequency %></td>
+			<% end %>
+			<td><%= document_frequency %></td>
+			<td>
+				<% idf = Math.log((total_answer/document_frequency), 10).round(3) unless document_frequency.zero? %>
+				<%= "Log(#{total_answer}/#{document_frequency}) = #{idf || 'null'}" %>
+			</td>
+			<% student_answers.each.with_index do |student_answer, index| %>
+				<% if document_frequency.zero? %>
+					<% document_weights[index] ||= nil %>
+				<% else %>
+					<% answer_term_frequency = student_answer.answer_term_frequency[answer_term_frequency_key][key_word] %>
+					<% wdt = idf * answer_term_frequency %>
+					<% document_weights[index] ||= 0 %>
+					<% document_weights[index] += wdt %>
+				<% end %>
+				<td><%= wdt || "null" %></td>
+			<% end %>
+		</tr>
+	<% end %>
+</tbody>
+<tfoot>
+
+	<tr>
+		<td colspan="<%= total_answer + 3 %>">
+			EACH DOCUMENT WEIGHT
+		</td>
+		<% document_weights.each.with_index do |document_weight, index| %>
+			<td><%= document_weight || "null" %></td>
+		<% end %>
+	</tr>
+</tfoot>
+</table>

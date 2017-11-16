@@ -1,0 +1,1029 @@
+--- !ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache
+columns:
+  ar_internal_metadata:
+  - &48 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: key
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &1 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *1
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &49 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: value
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &2 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *2
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &50 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &3 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *3
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &51 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &4 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *4
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  grades:
+  - &52 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: grades
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &5 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *5
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &53 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: name
+    table_name: grades
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &6 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *6
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &54 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: grades
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &7 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *7
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &55 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: grades
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &8 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *8
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  high_scores:
+  - &56 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: high_scores
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &9 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *9
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &57 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: game
+    table_name: high_scores
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &10 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *10
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &58 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: score
+    table_name: high_scores
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &11 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *11
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &59 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: level
+    table_name: high_scores
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &12 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *12
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &60 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: high_scores
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &13 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *13
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &61 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: high_scores
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &14 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *14
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  questions:
+  - &62 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: questions
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &15 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *15
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &63 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: subject_id
+    table_name: questions
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &16 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *16
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &64 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: title
+    table_name: questions
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &17 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *17
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &65 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: key
+    table_name: questions
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &18 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: text
+          type: :text
+          limit: 65535
+          precision: 
+          scale: 
+        - ''
+      : *18
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &66 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: questions
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &19 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *19
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &67 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: questions
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &20 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *20
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  schema_migrations:
+  - &68 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: version
+    table_name: schema_migrations
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &21 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *21
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  student_answers:
+  - &69 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &22 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *22
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &70 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: student_id
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &23 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *23
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &71 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: question_id
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &24 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *24
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &72 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: response
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &25 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: text
+          type: :text
+          limit: 65535
+          precision: 
+          scale: 
+        - ''
+      : *25
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &73 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: teacher_score
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &26 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: float
+          type: :float
+          limit: 24
+          precision: 
+          scale: 
+        - ''
+      : *26
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &74 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: system_score
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &27 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: float
+          type: :float
+          limit: 24
+          precision: 
+          scale: 
+        - ''
+      : *27
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - &75 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &28 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *28
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &76 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: student_answers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &29 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *29
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  students:
+  - &77 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: students
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &30 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *30
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &78 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: grade_id
+    table_name: students
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &31 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *31
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &79 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: name
+    table_name: students
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &32 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *32
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &80 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: gender
+    table_name: students
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &33 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *33
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &81 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: students
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &34 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *34
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &82 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: students
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &35 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *35
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  subjects:
+  - &83 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: subjects
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &36 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *36
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &84 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: teacher_id
+    table_name: subjects
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &37 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: int(11)
+          type: :integer
+          limit: 4
+          precision: 
+          scale: 
+        - ''
+      : *37
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &85 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: name
+    table_name: subjects
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &38 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *38
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &86 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: subjects
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &39 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *39
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &87 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: subjects
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &40 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *40
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  teachers:
+  - &88 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &41 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: bigint(20)
+          type: :integer
+          limit: 8
+          precision: 
+          scale: 
+        - auto_increment
+      : *41
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &89 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: name
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &42 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *42
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &90 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: gender
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &43 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *43
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &91 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: email
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &44 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *44
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &92 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: contact
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &45 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: varchar(255)
+          type: :string
+          limit: 255
+          precision: 
+          scale: 
+        - ''
+      : *45
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_general_ci
+    comment: 
+  - &93 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &46 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *46
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &94 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    table_name: teachers
+    sql_type_metadata: !ruby/marshalable:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      :__v2__:
+      - :@type_metadata
+      - :@extra
+      ? - &47 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+          sql_type: datetime
+          type: :datetime
+          limit: 
+          precision: 0
+          scale: 
+        - ''
+      : *47
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+columns_hash:
+  ar_internal_metadata:
+    key: *48
+    value: *49
+    created_at: *50
+    updated_at: *51
+  grades:
+    id: *52
+    name: *53
+    created_at: *54
+    updated_at: *55
+  high_scores:
+    id: *56
+    game: *57
+    score: *58
+    level: *59
+    created_at: *60
+    updated_at: *61
+  questions:
+    id: *62
+    subject_id: *63
+    title: *64
+    key: *65
+    created_at: *66
+    updated_at: *67
+  schema_migrations:
+    version: *68
+  student_answers:
+    id: *69
+    student_id: *70
+    question_id: *71
+    response: *72
+    teacher_score: *73
+    system_score: *74
+    created_at: *75
+    updated_at: *76
+  students:
+    id: *77
+    grade_id: *78
+    name: *79
+    gender: *80
+    created_at: *81
+    updated_at: *82
+  subjects:
+    id: *83
+    teacher_id: *84
+    name: *85
+    created_at: *86
+    updated_at: *87
+  teachers:
+    id: *88
+    name: *89
+    gender: *90
+    email: *91
+    contact: *92
+    created_at: *93
+    updated_at: *94
+primary_keys:
+  ar_internal_metadata: key
+  grades: id
+  high_scores: id
+  questions: id
+  schema_migrations: version
+  student_answers: id
+  students: id
+  subjects: id
+  teachers: id
+data_sources:
+  ar_internal_metadata: true
+  grades: true
+  high_scores: true
+  questions: true
+  schema_migrations: true
+  student_answers: true
+  students: true
+  subjects: true
+  teachers: true
+version: 20171106115819

@@ -1,0 +1,18 @@
+<% total_answer = @question.student_answers.count %>
+
+<h1>DETAILS QUESTION </h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+	<strong>Title:</strong>
+	<%= @question.title %>
+	<br/>
+	<strong>Key:</strong>
+	<%= @question.key %>
+	<br/>
+	<strong>Subject:</strong>
+	<%= @question.subject.name %>
+	<br/>
+</p>
+
+<%= render partial: 'table_term_frequency', locals: { student_answers: @question.student_answers, text_collection: @uni_gramed_key, answer_term_frequency_key: :uni_gram } %>
