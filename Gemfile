@@ -43,11 +43,17 @@ gem 'annotate'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-# pagination 
+# devise for login
+gem 'devise'
+# pagination
 gem 'kaminari'
 
-#tokenizer 
+gem "therubyracer"
+#gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+# css bootstrap
+gem "twitter-bootstrap-rails"
+
+#tokenizer
 gem 'pragmatic_tokenizer'
 
 # Stemming word
@@ -59,18 +65,23 @@ gem 'httparty'
 # A Ruby interface to the WordNet® Lexical Database.
 gem 'wordnet'
 gem 'wordnet-defaultdb'
-
-# Spell Checker 
-gem 'stanford-core-nlp'
- 
-# gem 'lingua'
-# gem 'ruby-stemmer', require: 'lingua/stemmer'
+gem 'rwordnet'
 
 # NGram
 gem 'n_gram'
 
-# number to words 
+# number to words
 gem 'humanize'
+
+# data migration
+gem 'migration_data'
+
+gem 'annotate'
+# jquery
+gem 'jquery-rails'
+# Authentication
+gem 'devise'
+gem 'devise_invitable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -79,6 +90,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
 end
 
 group :development do
@@ -88,6 +100,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

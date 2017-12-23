@@ -1,23 +1,30 @@
 <hr />
 	<h2>TEACHERS</h2>
-<%= link_to 'New teacher', new_teacher_path %></td>
 
-	<strong>No |</strong>
-	<strong>Name |</strong>
-	<strong>Gender |</strong>
-	<strong>Email |</strong>
-	<strong>Contact |</strong>
-	<strong>Action |</strong>
+<%= link_to 'New teacher', new_teacher_path,:class => 'btn btn-primary' %></td>
+
+<table class="table table-striped">
+	<tr>
+		<td><strong>No</strong></td>
+		<td><strong>Name</strong></td>
+		<td><strong>Gender</strong></td>
+		<td><strong>Email</strong></td>
+		<td><strong>Contact</strong></td>
+		<td><strong>Action</strong></td>
+	</tr>
+
 <% @teacher.each.with_index do |teacher,index| %>
 <p>
-	<%= "#{index + 1}" %>
-	<%= teacher.name %>
-	<%= teacher.gender %>
-	<%= teacher.email %>
-	<%= teacher.contact %>
-	<%= link_to 'Show', teacher_path(teacher.id) %></td>
-	<%= link_to 'Edit', edit_teacher_path(teacher.id) %></td>
-  <%= link_to 'Destroy', teacher_path(teacher.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<tr>
+		<td><%= "#{index + 1}" %></td>
+		<td><%= teacher.name %></td>
+		<td><%= teacher.gender %></td>
+		<td><%= teacher.email %></td>
+		<td><%= teacher.contact %></td>
+		<td><%= link_to 'Show', teacher_path(teacher.id), :class => 'btn btn-xs btn-default' %>
+		<%= link_to 'Edit', edit_teacher_path(teacher.id),:class => 'btn btn-xs btn-success' %>
+	  <%= link_to 'Destroy', teacher_path(teacher.id), method: :delete, data: { confirm: 'Are you sure?' },:class => 'btn btn-xs btn-danger' %></td>
+  </tr>
 </p>
  <% end %>
-	
+</table>

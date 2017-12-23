@@ -1,0 +1,5 @@
+<%= form_tag student_answers_path, method: :get do %>
+  <%= label_tag 'Select Exam' %>
+  <%= select_tag :exam_id, options_for_select(@exam_options, session[:exam_id]) %><br />
+  <%= submit_tag 'Submit'%>
+<% end %>

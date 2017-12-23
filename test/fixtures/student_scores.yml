@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_answer_id: 1
+  unigram_weight: 1.5
+  bigram_weight: 1.5
+  trigram_weight: 1.5
+  score: MyString
+  quality: 1.5
+
+two:
+  student_answer_id: 1
+  unigram_weight: 1.5
+  bigram_weight: 1.5
+  trigram_weight: 1.5
+  score: MyString
+  quality: 1.5

@@ -1,0 +1,56 @@
+<h2><%= t "devise.invitations.new.header" %></h2>
+
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
+  <%= devise_error_messages! %>
+
+  <% resource.class.invite_key_fields.each do |field| -%>
+    <p><%= f.label field %><br />
+    <%= f.text_field field %></p>
+  <% end -%>
+  <p><%= f.label 'role' %><p/>
+  <input type="radio" name="role" value="Teacher">teacher
+  <input type="radio" name="role" value="Student">student
+  <div id='student-select-wrapper'>
+    <%= label_tag 'student' %>
+    <%= select_tag 'student_id', options_for_select(@student_options) %>
+  </div>
+  <div id='teacher-select-wrapper'>
+    <%= label_tag 'teacher' %>
+    <%= select_tag 'teacher_id', options_for_select(@teacher_options) %>
+  </div>
+  <%= hidden_field_tag 'account[accountable_type]' %>
+  <%= hidden_field_tag 'account[accountable_id]' %>
+
+  <p><%= f.submit t("devise.invitations.new.submit_button") %></p>
+<% end %>
+
+<% content_for :javascript_tags do %>
+  <script>
+    var role;
+
+    function changeAccountableId(event){
+      $("#account_accountable_id").val(event.target.value)
+    }
+
+    function changeSelectRole() {
+      role = $("input[name='role']:checked").val();
+      $('#account_accountable_type').val(role);
+      $('#account_accountable_id').val('');
+      if(role == 'Teacher') {
+        $("#student-select-wrapper").hide()
+        $("#teacher-select-wrapper").show()
+      } else {
+        $("#student-select-wrapper").show()
+        $("#teacher-select-wrapper").hide()
+      }
+    }
+
+    $("input[name='role']").prop("checked", false);
+    $("#student-select-wrapper").hide()
+    $("#teacher-select-wrapper").hide()
+
+    $("input[name='role']").on('change', changeSelectRole)
+    $("#teacher_id").on('change', changeAccountableId)
+    $("#student_id").on('change', changeAccountableId)
+  </script>
+<% end %>

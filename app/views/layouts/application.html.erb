@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SPEO</title>
+    <title>SPEO - Sistem Penilaian Esai Otomatis menggunakan NLP & K-MEANS</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-		<%= link_to 'High Scores', high_scores_path %> |
-		<%= link_to 'Students', students_path %> |
-		<%= link_to 'Grades', grades_path %> |
-		<%= link_to 'Subjects', subjects_path %> |
-		<%= link_to 'Questions', questions_path %> |
-		<%= link_to 'Teachers', teachers_path %> |
-		<%= link_to 'Student Answers', student_answers_path %> |
-		<hr />
+  <body style="margin!important: 0; padding: 0" >
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="home_subjects_path">SPEO NLP & K-MEANS</a>
+        </div>
+        <div class="navbar-collapse collase">
+          <ul class="nav navbar-nav navbar-right">
+            <% if account_signed_in? %>
+              <li><%= link_to 'Home', home_subjects_path %></li>
+              <li><%= link_to 'Grades', grades_path %></li>
+              <li><%= link_to 'Subjects', subjects_path %></li>
+              <li><%= link_to 'Students', students_path %></li>
+              <li><%= link_to 'Teachers', teachers_path %></li>
+              <li><%= link_to 'Questions', questions_path %></li>
+              <li><%= link_to 'Student Answers', student_answers_path %></li>
+              <li><%= link_to 'Exams', exams_path %></li>
+              <li><%= link_to "Log Out" , destroy_account_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign In", account_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
     <%= yield %>
+    </div>
+    <div class="navbar" style="background-color: #f5f5f5;">
+      <div class="container">
+        <p class="text-muted" style="padding: 2%;" align="center">SPEO WORDNET - &copy 2017 Rizki Egi Purnama</p>
+      </div>
+    </div>
   </body>
+  <%= yield :javascript_tags %>
 </html>

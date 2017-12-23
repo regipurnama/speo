@@ -1,0 +1,23 @@
+<h2>EXAMS</h2>
+<%= link_to 'New Exam', new_exam_path, :class => 'btn btn-primary' %>
+<table class="table tabel-stripted">
+	<tr>
+		<td><strong>No</strong></td>
+		<td><strong>Title</strong> </td>
+		<td><strong>Description</strong> </td>
+		<td><strong>Action</strong></td>
+	</tr>
+	<% @exams.each.with_index do |exam,index| %>
+		<tr>
+			<td><%= "#{index + 1}" %></td>
+			<td><%= exam.title %></td>
+			<td><%= exam.description %></td>
+			<td>
+				<%= link_to 'Show', exam_path(exam.id), :class => 'btn btn-xs btn-default'%>
+				<%= link_to 'Edit', edit_exam_path(exam.id), :class => 'btn btn-xs btn-success' %>
+		  	<%= link_to 'Destroy', exam_path(exam.id), method: :delete, data: { confirm: 'Are you sure?' },:class => 'btn btn-xs btn-danger'%>
+				<%= link_to 'Detail', student_exam_score_path(exam.id), :class => 'btn btn-xs btn-default'%>
+	  	</td>
+		</tr>
+	<% end %>
+</table>

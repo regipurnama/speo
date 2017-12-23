@@ -1,8 +1,9 @@
-class TeachersController < ApplicationController 
+class TeachersController < ApplicationController
+	before_action :authenticate_user!
 	before_action :set_teacher, only: [:show,:edit,:update,:destroy]
 
 	def new
-		@teacher = Teacher.new 
+		@teacher = Teacher.new
 
 		render :new
 	end
@@ -11,7 +12,7 @@ class TeachersController < ApplicationController
 		@teacher =	Teacher.all
 	end
 
-	def create 
+	def create
 		@teacher = Teacher.new(teacher_params)
 
 		if @teacher.save
@@ -19,11 +20,11 @@ class TeachersController < ApplicationController
 		else
 			render :new
 		end
-	end 
+	end
 
 	def show
 	end
-	
+
 	def edit
 	end
 
@@ -35,7 +36,7 @@ class TeachersController < ApplicationController
 		end
 
 	end
-	def destroy 
+	def destroy
 		@teacher.destroy
 		redirect_to teachers_path
 	end

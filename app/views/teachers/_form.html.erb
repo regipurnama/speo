@@ -9,13 +9,16 @@
       </ul>
     </div>
     <% end %>
-  <%= f.label :name, 'Full Name : ' %>
-  <%= f.text_field :name %><br />
-  <%= f.label :gender %>
-  <%= f.select :gender, GENDER_OPTIONS, include_blank: false %><br />
-  <%= f.label :email %>
-  <%= f.text_field :email%><br />
-  <%= f.label :contact %>
-  <%= f.text_field :contact%><br />
+
+ <div class="form-group">
+   <%= f.label :name, 'Full Name : ',:class => 'control-label col-lg-2' %>
+  <%= f.text_field :name,:class => 'form_control' %><br />
+  <%= f.label :gender,:class => 'control-label col-lg-2' %>
+  <%= f.select :gender, GENDER_OPTIONS, include_blank: false,:class => 'form_control' %><br />
+  <%= f.label :email, :class => 'control-label col-lg-2'%>
+  <%= f.text_field :email, :class => 'form_control'%><br />
+  <%= f.label :contact,:class => 'control-label col-lg-2' %>
+  <%= f.text_field :contact, :class => 'form_control'%><br />
   <%= f.submit %>
+</div>
 <% end %>

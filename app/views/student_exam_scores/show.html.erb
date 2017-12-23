@@ -1,0 +1,23 @@
+<h2>STUDENT EXAM SCORES</h2>
+<table class="table table-striped">
+	<tr>
+		<td><strong>No</strong></td>
+		<td><strong>Name Student</strong></td>
+		<td><strong>Exam</strong></td>
+		<td><strong>Quality</strong></td>
+	</tr>
+<% @StudentExamScore.each.with_index do |student_exam_score,index| %>
+
+<p>
+	<tr>
+		<td><%= "#{index + 1}" %></td>
+		<td><%= student_exam_score.student.name %></td>
+		<td><%= student_exam_score.exam.title %></td>
+		<td><%= student_exam_score.quality %></td>
+
+	</tr>
+	</p>
+<% end %>
+</table>
+
+

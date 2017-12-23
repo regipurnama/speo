@@ -3,7 +3,7 @@ default: &default
   pool: 5
   host: localhost
   username: root
-  password: password
+  password: asd
 
 development:
   <<: *default

@@ -1,6 +1,6 @@
 <h2>QUESTIONS</h2>
-<%= link_to 'New Question', new_question_path %></td>
-<table>
+<%= link_to 'New Question', new_question_path, :class => 'btn btn-primary'%></td>
+<table class="table table-striped">
 	<tr>
 		<td><strong>No</strong></td>
 		<td><strong>Subject</strong></td>
@@ -15,11 +15,11 @@
 			<td><%= question.title %></td>
 			<td><%= question.key %></td>
 			<td>
-				<%= link_to 'Show', question_path(question.id) %>
-				<%= link_to 'Edit', edit_question_path(question.id) %>
-		  	<%= link_to 'Destroy', question_path(question.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+				<%= link_to 'Show', question_path(question.id),:class => 'btn btn-xs btn-default' %>
+				<%= link_to 'Edit', edit_question_path(question.id),:class => 'btn btn-xs btn-success' %>
+		  	<%= link_to 'Destroy', question_path(question.id), method: :delete, data: { confirm: 'Are you sure?' } ,:class => 'btn btn-xs btn-danger'%>
 			</td>
-		</tr>	
+		</tr>
 	<% end %>
 </table>
 <%= paginate @questions %>

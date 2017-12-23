@@ -1,19 +1,19 @@
 <h2>GRADES</h2>
-<%= link_to 'New Grade', new_grade_path %>
-<table>
+<%= link_to 'New Grade', new_grade_path,:class => 'btn btn-primary ' %>
+<table class="table table-striped">
 	<tr>
-		<td>No </td>
-		<td>Name </td>
-		<td>Action </td>
+		<td><strong>No</strong> </td>
+		<td><strong>Name</strong> </td>
+		<td><strong>Action</strong></td>
 	</tr>
 	<% @grades.each.with_index do |grade,index| %>
 		<tr>
 			<td><%= "#{index + 1}" %></td>
 			<td><%= grade.name %></td>
-			<td> 
-				<%= link_to 'Show', grade_path(grade.id) %> |
-				<%= link_to 'Edit', edit_grade_path(grade.id) %> |
-		  	<%= link_to 'Destroy', grade_path(grade.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<td>
+				<%= link_to 'Show', grade_path(grade.id), :class => 'btn btn-default btn-xs' %>
+				<%= link_to 'Edit', edit_grade_path(grade.id) , :class => 'btn btn-success btn-xs'%>
+		  	<%= link_to 'Destroy', grade_path(grade.id), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-xs' %>
 	  	</td>
 		</tr>
 	<% end %>

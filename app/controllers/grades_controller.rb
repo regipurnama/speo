@@ -1,25 +1,26 @@
 class GradesController < ApplicationController
+	before_action :authenticate_user!
 	before_action :set_grade, only: [:show,:edit,:update,:destroy]
-	
+
 	def index
 		@grades = Grade.all
 	end
 
-	def new 
-		@grade = Grade.new 
+	def new
+		@grade = Grade.new
 
 		render :new
-	end 
+	end
 
-	def create 
+	def create
 		@grade = Grade.new(grade_params)
-		
+
 		if @grade.save
 			redirect_to grades_path
 		else
 			render :new
 		end
-	end 
+	end
 
 	def update
 		if @grade.update(grade_params)
@@ -29,20 +30,20 @@ class GradesController < ApplicationController
 		end
 	end
 
-	def destroy 
+	def destroy
 		@grade.destroy
 		redirect_to grades_path
 	end
 
-	def edit 
+	def edit
 	end
-		# get /grade/1 
+		# get /grade/1
 	def show
 	end
 
 	private
 	def grade_params
-		params.require(:grade).permit(:name) 
+		params.require(:grade).permit(:name)
 	end
 	#take a id of grade
 	def set_grade

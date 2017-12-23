@@ -1,19 +1,24 @@
 class SubjectsController < ApplicationController
+	before_action :authenticate_account!
 	before_action :set_teacher_options, only:[:edit,:new,:update,:create]
 	before_action :set_subject, only: [:edit,:show,:update,:destroy]
 	def index
-		@subject = Subject.all
+		@subjects = Subject.all
 	end
-	
-	def show 
+
+	def home
+		render :home
 	end
-	
-	def new 
+
+	def show
+	end
+
+	def new
 		@subject = Subject.new
 		render :new
 	end
 
-	def create 
+	def create
 		@subject = Subject.new(subject_params)
 		if @subject.save
 			redirect_to subjects_path
@@ -22,23 +27,23 @@ class SubjectsController < ApplicationController
 		end
 
 	end
-	def edit 
+	def edit
 		render :edit
 	end
 	def update
 		if @subject.update(subject_params)
 			redirect_to subjects_path
-		else 
+		else
 			render :edit
 		end
 
 	end
-	def destroy 
+	def destroy
 		@subject.destroy
 		redirect_to subjects_path
 	end
 
-	private 
+	private
 	def subject_params
 		params.require(:subject).permit(:teacher_id, :name)
 	end

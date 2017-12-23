@@ -5,7 +5,7 @@ class WordCorrection
   GINGER_API_VERSION  = '2.0'
   GINGER_API_KEY      = '6ae0c3a0-afdc-4532-a810-82ded0054236'
   DEFAULT_LANG        = 'US'
-  SEPARATOR           = " . "
+  SEPARATOR           = '. '
 
 	def self.correct(words)
 		is_string = words.kind_of? String
@@ -16,7 +16,7 @@ class WordCorrection
 		words.each.with_index do |word, index|
 			word        = word.downcase.remove("-")
 			cached_word = CACHED_CORRECT_WORDS[word.to_sym]
-			
+
 			if cached_word.nil?
 				words_to_correct << word
 			else
@@ -25,7 +25,7 @@ class WordCorrection
 		end
 
 		if words_to_correct.present?
-			@text = words_to_correct.join(SEPARATOR)
+			@text = words_to_correct.join(SEPARATOR).chomp
 			perform_request
 
 			words_to_correct.each.with_index do |word, index|

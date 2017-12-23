@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  w_term_frequency: 
+  w_bigram: 
+  w_trigram: 
+  question_id: 1
+
+two:
+  w_term_frequency: 
+  w_bigram: 
+  w_trigram: 
+  question_id: 1

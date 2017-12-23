@@ -1,9 +1,10 @@
-class StudentsController < ApplicationController 
+class StudentsController < ApplicationController
+	before_action :authenticate_user!
 	before_action :set_grade_options, only: [:new, :show,:index,:update,:create,:edit]
 	before_action :set_student, only: [:show,:edit,:update,:destroy]
 
 	def new
-		@student = Student.new 
+		@student = Student.new
 
 		render :new
 	end
@@ -12,7 +13,7 @@ class StudentsController < ApplicationController
 		@students =	Student.includes(:grade).all.page(params[:page]).per(10)
 	end
 
-	def create 
+	def create
 		@student = Student.new(student_params)
 
 		if @student.save
@@ -20,11 +21,11 @@ class StudentsController < ApplicationController
 		else
 			render :new
 		end
-	end 
+	end
 
 	def show
 	end
-	
+
 	def edit
 	end
 
@@ -36,11 +37,11 @@ class StudentsController < ApplicationController
 		end
 
 	end
+
 	def destroy
 		@student.destroy
 		redirect_to students_path
-
-	end 
+	end
 
 	private
 	def student_params
@@ -55,5 +56,4 @@ class StudentsController < ApplicationController
 	def set_student
 		@student = Student.find(params[:id])
 	end
-
 end

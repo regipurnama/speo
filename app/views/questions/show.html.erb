@@ -1,8 +1,7 @@
-<% total_answer = @question.student_answers.count %>
+<% total_answer = @exam_question.student_answers.count %>
 
 <h1>DETAILS QUESTION </h1>
-<p id="notice"><%= notice %></p>
-
+<%= link_to 'Change Exam', question_path(params[:id], clear_exam_id: true) %>
 <p>
 	<strong>Title:</strong>
 	<%= @question.title %>
@@ -15,4 +14,8 @@
 	<br/>
 </p>
 
-<%= render partial: 'table_term_frequency', locals: { student_answers: @question.student_answers, text_collection: @uni_gramed_key, answer_term_frequency_key: :uni_gram } %>
+<%= render partial: 'table_term_frequency', locals: { student_answers: @exam_question.student_answers, text_collection: @uni_gramed_key, answer_term_frequency_key: :uni_gram } %>
+<br />
+<%= render partial: 'table_term_frequency', locals: { student_answers: @exam_question.student_answers, text_collection: @bi_gramed_key, answer_term_frequency_key: :bi_gram } %>
+<br />
+<%= render partial: 'table_term_frequency', locals: { student_answers: @exam_question.student_answers, text_collection: @tri_gramed_key, answer_term_frequency_key: :tri_gram } %>

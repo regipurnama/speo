@@ -31,7 +31,7 @@
 			<% end %>
 			<td><%= document_frequency %></td>
 			<td>
-				<% idf = Math.log((total_answer/document_frequency), 10).round(3) unless document_frequency.zero? %>
+				<% idf = Math.log10((total_answer/document_frequency.to_f)).round(3) unless document_frequency.zero? %>
 				<%= "Log(#{total_answer}/#{document_frequency}) = #{idf || 'null'}" %>
 			</td>
 			<% student_answers.each.with_index do |student_answer, index| %>

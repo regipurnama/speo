@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 1
+  student_exam_id: 1
+  score: MyString
+  quality: 1.5
+
+two:
+  student_id: 1
+  student_exam_id: 1
+  score: MyString
+  quality: 1.5
